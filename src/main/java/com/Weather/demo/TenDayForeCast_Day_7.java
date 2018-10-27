@@ -14,7 +14,7 @@ public class TenDayForeCast_Day_7
     
     public static void weather_Temperature(String strState, String strCity)
     {	
-    	String body = RestAssured.given().get("http://api.wunderground.com/api/99a8db9a0f3c2e31/forecast10day/q/"+strState+"/"+strCity+".json").asString();
+    	String body = RestAssured.given().get("http://api.wunderground.com/api/Key/forecast10day/q/"+strState+"/"+strCity+".json").asString();
     	
     	int intTempHigh;
     	int intTempLow;

@@ -84,7 +84,7 @@ public class CompareWeatherResponse
     public static String weather_Temperature(String strState, String strCity)
     {	
     	String strTemperature = "";
-    	String body = RestAssured.given().get("http://api.wunderground.com/api/99a8db9a0f3c2e31/conditions/q/"+strState+"/"+strCity+".json").asString();
+    	String body = RestAssured.given().get("http://api.wunderground.com/api/Key/conditions/q/"+strState+"/"+strCity+".json").asString();
     	strTemperature = JsonPath.read(body, "$.current_observation.temp_f").toString();
         
 		return strTemperature;         
@@ -93,7 +93,7 @@ public class CompareWeatherResponse
     public static String weather_FeelsLike(String strState, String strCity)
     {	
     	String strFeelsLike = "";
-    	String body = RestAssured.given().get("http://api.wunderground.com/api/99a8db9a0f3c2e31/conditions/q/"+strState+"/"+strCity+".json").asString();
+    	String body = RestAssured.given().get("http://api.wunderground.com/api/Key/conditions/q/"+strState+"/"+strCity+".json").asString();
     	strFeelsLike = JsonPath.read(body, "$.current_observation.feelslike_f").toString();
         
 		return strFeelsLike;         
@@ -102,7 +102,7 @@ public class CompareWeatherResponse
     public static String weather_WindChill(String strState, String strCity)
     {	
     	String strWindChill = "";
-    	String body = RestAssured.given().get("http://api.wunderground.com/api/99a8db9a0f3c2e31/conditions/q/"+strState+"/"+strCity+".json").asString();
+    	String body = RestAssured.given().get("http://api.wunderground.com/api/Key/conditions/q/"+strState+"/"+strCity+".json").asString();
     	strWindChill = JsonPath.read(body, "$.current_observation.windchill_f").toString();
         
 		return strWindChill;         
@@ -111,7 +111,7 @@ public class CompareWeatherResponse
     public static String weather_Wind(String strState, String strCity)
     {	
     	String strWind = "";
-    	String body = RestAssured.given().get("http://api.wunderground.com/api/99a8db9a0f3c2e31/conditions/q/"+strState+"/"+strCity+".json").asString();
+    	String body = RestAssured.given().get("http://api.wunderground.com/api/Key/conditions/q/"+strState+"/"+strCity+".json").asString();
     	strWind = JsonPath.read(body, "$.current_observation.wind_mph").toString();
         
 		return strWind;         
@@ -120,7 +120,7 @@ public class CompareWeatherResponse
     public static String weather_Humidity(String strState, String strCity)
     {	
     	String strHumidity = "";
-    	String body = RestAssured.given().get("http://api.wunderground.com/api/99a8db9a0f3c2e31/conditions/q/"+strState+"/"+strCity+".json").asString();
+    	String body = RestAssured.given().get("http://api.wunderground.com/api/Key/conditions/q/"+strState+"/"+strCity+".json").asString();
     	strHumidity = JsonPath.read(body, "$.current_observation.relative_humidity").toString();
         
 		return strHumidity;         
@@ -129,7 +129,7 @@ public class CompareWeatherResponse
     public static String weather_Preciptation(String strState, String strCity)
     {	
     	String strPreciptation = "";
-    	String body = RestAssured.given().get("http://api.wunderground.com/api/99a8db9a0f3c2e31/conditions/q/"+strState+"/"+strCity+".json").asString();
+    	String body = RestAssured.given().get("http://api.wunderground.com/api/Key/conditions/q/"+strState+"/"+strCity+".json").asString();
     	strPreciptation = JsonPath.read(body, "$.current_observation.precip_today_in").toString();
         
 		return strPreciptation;         
