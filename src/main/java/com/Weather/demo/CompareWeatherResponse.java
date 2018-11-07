@@ -19,6 +19,7 @@ public class CompareWeatherResponse
     {    	
     	try
 		{
+    		//Get State and City names for parameterizing
     		String state = "OH";
 			String city = "Orrville";
 			
